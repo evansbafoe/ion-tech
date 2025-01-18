@@ -7,7 +7,15 @@ body {
     text-align: center;
     color: rgb(0,0,128);
   }
-  
+  .logo img {
+    height: 30px;
+}
+
+.logo p {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+}
   header {
     background-color:blue;
     text-align: center ;
