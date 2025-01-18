@@ -8,11 +8,11 @@ body {
     color: rgb(0,0,128);
   }
   .logo img {
-    height: 30px;
+    height: 70px;
 }
 
 .logo p {
-    font-size: 12px;
+    font-size: 18px;
     font-weight: bold;
     margin: 0;
 }
