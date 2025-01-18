@@ -16,22 +16,11 @@ body {
     font-weight: bold;
     margin: 0;
 }
-  header {
-    background-color:blue;
-    text-align: center ;
-    border-radius: 0px;
-    background-size: cover;
-    color: white;
-    padding: 20px 0;
-    position: flex;
-    width: 100%;
-    top: 0;
-    z-index: 800;
-  }
+  
   
   .header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
     max-width: 650px;
     margin: 0 auto;
