@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.7">
+  <title>ION-TECH-ELECTRONICS HUB</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h3 style="font-family: palatino">ION-TECH ELECTRONICS HUB </h3>
+      <nav>
+        <div class="dropdown">
+          <button class="dropbtn">Menu</button>
+          <div class="dropdown-content">
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="#" onclick="showPage('products')">Products</a>
+            <a href="#" onclick="showPage('about')">About</a>
+            <a href="#" onclick="showPage('contact')">Contact</a>
+            <a href="#" onclick="showPage('cart')">Cart (<span id="cartCount">0</span>)</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div id="home" class="page active">
+     
+      <h3 >Home Of Starter Kids</h3>
+      <div class="product-list" id="homeProductList"></div>
+    </div>
+
+    <div id="products" class="page">
+      <h1>Our Products</h1>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()">
+        <button id="searchButton" onclick="searchProducts()">Search</button>
+      </div>
+      <div class="product-list" id="productList"></div>
+    </div>
+
+    <div id="productDetail" class="page">
+      <h1>Product Detail</h1>
+      <div id="productDetailContent"></div>
+    </div>
+
+    <div id="cart" class="page">
+      <h1>Cart</h1>
+      <ul id="cartList"></ul>
+      <p>Total: GH <span id="totalAmount">0.00</span></p>
+      <button onclick="clearCart()">Clear Cart</button>
+      <p>Cost of delivery</p> 
+      <p>Delivery cost of products within Accra =GH 35</p> 
+    <p>Delivery cost of products to Kasoa =GH 45</p> 
+  <p>Delivery cost of products to Tema =GH 50</p> 
+  <p>Delivery cost of products Winneba  =GH 40</p> 
+<p>Delivery cost of products to Adenta =GH 35</p>
+    </div>
+
+    <div id="about" class="page">
+      <h1>About Us</h1>
+      <p>This is ion-tech electronics, sells all kinds electronics. We are into anything automation,school project works etc. </p>
+    </div>
+
+    <div id="contact" class="page">
+      <h1>Contact Us</h1>
+      <form id="feedbackForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Submit</button>
+      </form>
+      
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Online Business. All rights reserved. Develop by iontech automation.KASOA</p>
+  </footer>
+  <!-- Social Links -->
+    <div class="social-links">
+         
+        <a href="https://wa.me/qr/O72YQDZFUTWLI1" target="_blank"><img src="https://i.ibb.co/YD9b59v/images-12.jpg" alt="WhatsApp"></a>
+      
+
+  <script src="script.js"></script>
+</body>
+</html>
