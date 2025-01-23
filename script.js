@@ -113,7 +113,25 @@ const products = [
     if (event.key === 'ArrowLeft') {
       history.back();
     }
-  
+  // Check if the Navigation API is supported
+        if ('navigation' in window) {
+            // Add an event listener for the 'navigate' event
+            window.navigation.addEventListener('navigate', (event) => {
+                console.log('Navigation event detected:', event);
+
+                // Access the navigation details
+                const fromUrl = event.from.url;
+                const toUrl = event.to.url;
+
+                console.log('Navigated from:', fromUrl);
+                console.log('Navigated to:', toUrl);
+
+                // Implement your custom logic based on the navigation details
+                // For example, you can update the UI, track analytics, etc.
+            });
+        } else {
+            console.log('Navigation API is not supported in this browser.');
+        }
    // Clear cart and favorites count after 24 hours
       setTimeout(() => {
           localStorage.removeItem('cart');
