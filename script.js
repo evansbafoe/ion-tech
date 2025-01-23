@@ -102,36 +102,18 @@ const products = [
   
   document.addEventListener('DOMContentLoaded', () => {
     displayProducts(products, 'productList');
-    displayProducts(products.slice(0, 20), 'homeProductList'); // Display first 8 products on the home page
+    displayProducts(products.slice(0, 30), 'homeProductList'); // Display first 8 products on the home page
   });
   document.addEventListener('DOMContentLoaded', () => {
     displayProducts(products, 'productList');
-    displayProducts(products.slice(0, 20), 'camerasProductList'); // Display first 8 products on the home page
+    displayProducts(products.slice(0, 40), 'camerasProductList'); // Display first 8 products on the home page
   });
   // Enable back arrow key navigation
   document.addEventListener('keydown', event => {
     if (event.key === 'ArrowLeft') {
       history.back();
     }
-  // Check if the Navigation API is supported
-        if ('navigation' in window) {
-            // Add an event listener for the 'navigate' event
-            window.navigation.addEventListener('navigate', (event) => {
-                console.log('Navigation event detected:', event);
-
-                // Access the navigation details
-                const fromUrl = event.from.url;
-                const toUrl = event.to.url;
-
-                console.log('Navigated from:', fromUrl);
-                console.log('Navigated to:', toUrl);
-
-                // Implement your custom logic based on the navigation details
-                // For example, you can update the UI, track analytics, etc.
-            });
-        } else {
-            console.log('Navigation API is not supported in this browser.');
-        }
+ 
    // Clear cart and favorites count after 24 hours
       setTimeout(() => {
           localStorage.removeItem('cart');
